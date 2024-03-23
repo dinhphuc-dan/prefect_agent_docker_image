@@ -2,4 +2,4 @@
 
 prefect==2.14.17
 prefect-dbt[bigquery]==0.4.1
-prefect-airbyte==0.3.2
+prefect-airbyte==0.3.0
