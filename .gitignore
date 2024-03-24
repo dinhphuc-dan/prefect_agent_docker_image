@@ -155,3 +155,4 @@ cython_debug/
 # local
 .test
 .dc
+uninstalls.txt
