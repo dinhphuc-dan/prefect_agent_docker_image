@@ -1,6 +1,6 @@
 # python 3.10.0
+# base image prefecthq/prefect:2.10-python3.10 in order to get pydantic v1 and httpx==0.24.1
 
-prefect==2.10.0
-prefect-dbt[bigquery]
 prefect-airbyte==0.2.0
-httpx==0.24.1
+prefect-dbt[bigquery]==0.4.1
+# httpx==0.24.1
