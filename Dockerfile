@@ -1,5 +1,5 @@
 # We're using the latest version of Prefect with Python 3.10
-FROM prefecthq/prefect:2.14-python3.10
+FROM prefecthq/prefect:2.10-python3.10
 WORKDIR /app
 
 # Add our requirements.txt file to the image and install dependencies
