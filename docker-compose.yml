@@ -1,0 +1,19 @@
+services:  
+  prefect-agent-dbt-core:
+    image: phucdinh/prefect-agent-plus-python-libraries:v1.1.1test01
+    container_name: prefect-agent-dbt-core
+    restart: unless-stopped
+    entrypoint: ["prefect", "agent", "start",  "-q", "PANLOCAL_DBT"]
+    env_file:
+      - .env
+    network_mode: "host" 
+
+
+  prefect-agent-airbyte:
+    image: phucdinh/prefect-agent-plus-python-libraries:v1.1.1test01
+    container_name: prefect-agent-airbyte
+    restart: unless-stopped
+    entrypoint: ["prefect", "agent", "start", "-q", "PANLOCAL_AIRBYTE"]
+    env_file:
+      - .env
+    network_mode: "host" 
