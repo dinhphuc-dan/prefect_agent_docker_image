@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     requirements, requirements_lock = get_requirements_path(path = _args.path)
 
-    if not (Path.exists(requirements_lock) or _args.rewrite.lower() == "true"):
+    if not (Path.exists(requirements_lock) or (lambda x: _args.rewrite.lower() if _args.rewrite.lower() else _args.rewrite) == "true"):
         if not Path.exists(requirements):
             raise FileNotFoundError(f"File {requirements} not found. Please create it first.")
         else:
